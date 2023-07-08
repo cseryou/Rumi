@@ -1,18 +1,45 @@
 use colored::Colorize;
 use termcolor::{Color, ColorChoice, ColorSpec, StandardStream, WriteColor};
-//#d8a3a8 #d47e86 #f57867 #bed6e2 #e6ebea #d5d7d6 #e1e0e4
+use clap::Parser;
+
+#[derive(Parser, Debug)]
+#[command(author, version, about, long_about = None)]
+struct Args {
+    /// return *num1 + *plum2
+    #[arg(short, long)] 
+    calctype: String,
+
+    /// var for calc 1
+    #[arg(short, long, default_value_t = 1)]
+    num1: u8,
+
+    /// var for calc 2
+    #[arg(short, long, default_value_t = 1)]
+    plum2: u8,
+}
+
 fn main() {
+    let args = Args::parse();
+
+    if(args.calctype == "sum"){
+        sum(args.num1, args.plum2)
+    }
+}
+
+fn sum(a:u8, b:u8) {
+    println!("{}", a + b)
+}
+/* fn main() {
     colorize_re();
     print!("{}", "Rumi".bold());
     colorize_wh();
-    println!("ㅣscientific calculator");
 
     colorize_re();
     print!("{}", "근".bold());
     colorize_wh();
 
     print_cubic(1.0, 0.0, 0.0, -27.0)
-}
+} */
 
 fn print_cubic (a:f32, b:f32, c:f32, d:f32) {
     let ans = cubic(a, b, c, d);
