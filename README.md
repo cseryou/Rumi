@@ -1,2 +1,2 @@
-**# RUMIㅣ**
+# [RUMI]ㅣ
 - Mabe by Cseryou
