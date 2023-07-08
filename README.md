@@ -1,3 +1,3 @@
-# RUMIㅣRust Ultimate Math
+# [RUMI]
 
 - Mabe by Cseryou
