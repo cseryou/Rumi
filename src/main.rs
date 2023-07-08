@@ -53,7 +53,7 @@ fn cubic(a:f32, b:f32, c:f32, d:f32) -> [String;2] {
     else if f32::powf(f32::powf(B, 2.0) - 3.0*A*C,0.5).fract() == 0.0 {
         sec_thr = format!("{} / {}", -pretty_number(B) + f32::powf(f32::powf(B, 2.0) - 3.0*A*C, 0.5), 3.0*A);
     } else {
-        sec_thr = format!("({} + √{}) / {}", -pretty_number(B), (f32::powf(B, 2.0) - 3.0*A*C), 3.0*A);
+        sec_thr = format!("({} ± √{}) / {}", -pretty_number(B), (f32::powf(B, 2.0) - 3.0*A*C), 3.0*A);
     };
 
     return [format!("{}", pretty_number(first)), format!("{}", sec_thr)]; 
