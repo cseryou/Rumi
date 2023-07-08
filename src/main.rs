@@ -8,7 +8,7 @@ fn main() {
     println!("ㅣscientific calculator");
 
     colorize_re();
-    print!("{}", "한 근".bold());
+    print!("{}", "근".bold());
     colorize_wh();
 
     print_cubic(1.0, 0.0, 0.0, -27.0)
